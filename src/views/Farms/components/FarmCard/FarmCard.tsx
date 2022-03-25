@@ -86,7 +86,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
         farmImage={farmImage}
         tokenSymbol={farm.token.symbol}
       />
-      {removed && (
+      {!removed && (
         <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <CardLabel>{TranslateString(736, 'APR')}:</CardLabel>
           <CardLabel>

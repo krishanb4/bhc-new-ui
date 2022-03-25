@@ -21,6 +21,7 @@ const farms: FarmConfig[] = [
     ended: false,
     isBNB: false,
     start: 'Opens in: 8 AM UTC 14/Feb/2022',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Excited',
@@ -42,6 +43,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     info: 'https://pancakeswap.finance/info/pool/0x219686ea455297aa6a052c0d41cefa0c4784549e',
     start: 'Opens in: 8 AM UTC 14/Feb/2022',
+    category: 'farming',
   },
   {
     farmName: 'Feeling Wealthy',
@@ -71,6 +73,7 @@ const farms: FarmConfig[] = [
     ],
     limitCheck: true,
     limit: 50000,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Healed',
@@ -81,8 +84,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xeDa21B525Ac789EaB1a08ef2404dd8505FfB973D',
     },
-    // @ts-ignore
-    token: tokens?.cure ?? '',
+    token: tokens.cure,
     quoteToken: tokens.wbnb,
     farmAddress: '0x942A683eFD49C4e2a56057fDBd60B62F9d361AB8',
     earn: 'CURE',
@@ -94,6 +96,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Ready',
@@ -116,6 +119,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Game',
@@ -138,6 +142,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Sparkly',
@@ -148,7 +153,6 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4',
     },
-    // @ts-ignore
     token: tokens.srkb,
     quoteToken: tokens.wbnb,
     farmAddress: '0x0ccE1439Fd226906c2048C9c602175C96fB85173',
@@ -161,6 +165,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Driven',
@@ -171,7 +176,6 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xeDa21B525Ac789EaB1a08ef2404dd8505FfB973D',
     },
-    // @ts-ignore
     token: tokens.sfuel,
     quoteToken: tokens.wbnb,
     farmAddress: '0xcb84eB80b33C79a7971C079DF87Dc6698aa1d5da',
@@ -184,6 +188,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'emotional',
   },
   {
     farmName: 'BHC Milestone Pool 1',
@@ -206,6 +211,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'milestone',
   },
   {
     farmName: 'HPS Milestone Pool 1 (OLD)',
@@ -228,6 +234,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'milestone',
   },
   {
     farmName: 'HPS Milestone Pool 1',
@@ -250,6 +257,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: '',
+    category: 'milestone',
   },
   // {
   //   farmName: 'BHC Milestone Pool 2',
@@ -272,6 +280,7 @@ const farms: FarmConfig[] = [
   //   isBNB: false,
   //   locked: false,
   //   info: '',
+
   // },
   // {
   //   farmName: 'HPS Milestone Pool 2',
@@ -426,6 +435,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: false,
     info: `https://pancakeswap.finance/info/pair/0x851db01b337ee3e5ab161ad04356816f09ea01dc`,
+    category: 'farming',
   },
   {
     farmName: 'BHC Maxi',
@@ -447,6 +457,7 @@ const farms: FarmConfig[] = [
     ended: false,
     isBNB: false,
     locked: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Stable',
@@ -468,6 +479,7 @@ const farms: FarmConfig[] = [
     ended: true,
     isBNB: false,
     locked: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Playful',
@@ -489,6 +501,7 @@ const farms: FarmConfig[] = [
     ended: true,
     isBNB: false,
     locked: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Loyal',
@@ -511,6 +524,7 @@ const farms: FarmConfig[] = [
     isBNB: false,
     locked: true,
     stakeNote: '(Locked Until 20 Oct 2022)',
+    category: 'emotional',
   },
   {
     farmName: 'Anniversary Pool HPS',
@@ -533,6 +547,7 @@ const farms: FarmConfig[] = [
     isBNB: true,
     locked: false,
     stakeNote: '',
+    category: 'emotional',
   },
   {
     farmName: 'Anniversary Pool BHC',
@@ -554,6 +569,7 @@ const farms: FarmConfig[] = [
     ended: true,
     isBNB: false,
     locked: true,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Hot',
@@ -574,6 +590,7 @@ const farms: FarmConfig[] = [
     start: 'Opens in: 8 AM UTC 25/Aug/2021',
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Hyped',
@@ -594,6 +611,7 @@ const farms: FarmConfig[] = [
     start: 'Opens in: 8 AM UTC 6/Aug/2021',
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Brand New',
@@ -614,6 +632,7 @@ const farms: FarmConfig[] = [
     start: 'Opens in: 8 AM UTC 28/July/2021',
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Energized',
@@ -634,6 +653,7 @@ const farms: FarmConfig[] = [
     start: 'Opens in: 8 AM UTC 24/Jun/2021',
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Grateful',
@@ -654,6 +674,7 @@ const farms: FarmConfig[] = [
     start: 'Coming Soon...!',
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Excited',
@@ -674,6 +695,7 @@ const farms: FarmConfig[] = [
     ended: true,
     isBNB: false,
     info: 'https://info.julswap.com/pair/0xcaC3b7DE7D5c44E8E1048241C7dE29a61b5C3E7d',
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Happy',
@@ -693,6 +715,7 @@ const farms: FarmConfig[] = [
     factor: 0.16,
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
 
   {
@@ -717,6 +740,7 @@ const farms: FarmConfig[] = [
     factor: 1,
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling Loved',
@@ -736,6 +760,7 @@ const farms: FarmConfig[] = [
     factor: 0.88,
     ended: true,
     isBNB: false,
+    category: 'emotional',
   },
   {
     farmName: 'Feeling High',
@@ -756,6 +781,7 @@ const farms: FarmConfig[] = [
     ended: true,
     isBNB: false,
     info: '#',
+    category: 'farming',
   },
 ]
 

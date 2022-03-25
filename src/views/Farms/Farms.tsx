@@ -21,19 +21,18 @@ import FarmTabButtons from './components/FarmTabButtons'
 import farmsConfig from '../../config/constants/farms'
 
 export enum FarmType {
-  Farming = 'Farming',
-  EmotionPools = 'EmotionPools',
-  MilestonePools = 'Milestone Pools',
+  Farming = 'farming',
+  EmotionPools = 'emotional',
+  MilestonePools = 'milestone',
 }
 
 interface FarmsInterface {
   type: FarmType
   title: string
   subTitle: string
-  pids?: Array<number>
 }
 
-const Farms: React.FC<FarmsInterface> = ({ title, subTitle, pids }) => {
+const Farms: React.FC<FarmsInterface> = ({ title, subTitle, type }) => {
   const { path } = useRouteMatch()
 
   const farmsLP = useFarms()
@@ -56,18 +55,19 @@ const Farms: React.FC<FarmsInterface> = ({ title, subTitle, pids }) => {
   const stakedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
+
   const getFarms = () => {
     let allFarms = []
     if (stakedOnly) {
       allFarms = stakedOnlyFarms
+    } else {
+      allFarms = farmsConfig
     }
-    allFarms = farmsConfig
 
-    if (pids) {
-      allFarms = allFarms.filter(({ pid }) => {
-        return pids.includes(pid)
-      })
-    }
+    allFarms = allFarms.filter(({ category }) => {
+      return category === type
+    })
+
     return allFarms
   }
 

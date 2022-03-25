@@ -17,6 +17,12 @@ export enum PoolIds {
   poolUnlimited = 'poolUnlimited',
 }
 
+// bhc
+interface balance {
+  token: Token
+  limit: number
+}
+
 export type IfoStatus = 'idle' | 'coming_soon' | 'live' | 'finished'
 
 interface IfoPoolInfo {
@@ -88,10 +94,11 @@ export interface FarmConfig {
   locked?: boolean
   stakeNote?: string
   info?: string
-  balanceCheck?: any
-  balanceConstraints?: any
-  limitCheck?: any
-  limit?: any
+  balanceCheck?: boolean
+  balanceConstraints?: balance[]
+  limitCheck?: boolean
+  limit?: number
+  category?: string
 }
 
 export interface PoolConfig {

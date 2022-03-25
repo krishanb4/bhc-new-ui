@@ -5,7 +5,7 @@ import Page from 'components/layout/Page'
 import { useParams } from 'react-router-dom'
 
 const videos = [
-  { id: '1', title: 'QUICK TOWER', link: 'https://www.youtube.com/embed/7J6251H24PI' },
+  { id: '1', title: 'QUICK TOUR', link: 'https://www.youtube.com/embed/83CzJ-VqhCk' },
   { id: '2', title: 'What is BILLION HAPPINESS?', link: 'https://www.youtube.com/embed/7J6251H24PI' },
   { id: '3', title: 'How to Set-up your Wallet?', link: 'https://www.youtube.com/embed/7J6251H24PI' },
   { id: '4', title: 'How to Trade or Swap?', link: 'https://www.youtube.com/embed/-xi-MxBVOfQ' },

@@ -78,24 +78,13 @@ const App: React.FC = () => {
               <Learn />
             </Route>
             <Route path="/emotion-pools">
-              <Farms
-                pids={[32, 15, 12, 34]}
-                type={FarmType.EmotionPools}
-                title="Emotion Pools"
-                subTitle="Stake single tokens to earn"
-              />
+              <Farms type={FarmType.EmotionPools} title="Emotion Pools" subTitle="Stake single tokens to earn" />
             </Route>
             <Route path="/milestone-pools">
-              <Farms
-                pids={[18, 19, 20, 21, 22, 24, 26]}
-                type={FarmType.MilestonePools}
-                title="Milestone Pools"
-                subTitle="Stake single tokens to earn"
-              />
+              <Farms type={FarmType.MilestonePools} title="Milestone Pools" subTitle="Stake single tokens to earn" />
             </Route>
             <Route path="/yield-farming">
               <Farms
-                pids={[33, 16]}
                 type={FarmType.Farming}
                 title="Yield Farming"
                 subTitle="Stake Liquidity Pool (LP) tokens to earn"

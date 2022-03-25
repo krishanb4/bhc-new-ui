@@ -1,6 +1,7 @@
 import React from 'react'
 import { CommunityTag, CoreTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
+import { Tag, Flex, Heading, Image, Text } from '@pancakeswap-libs/uikit'
 import { CardHeader, CardLabel, CardTitle } from './FarmCardStyles'
 
 export interface ExpandableSectionProps {
@@ -23,7 +24,8 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   const TranslateString = useI18n()
   return (
     <CardHeader>
-      <CardLabel>APR:</CardLabel>
+      <Image src={`/images/new_farm/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
+
       <CardTitle>{lpLabel}</CardTitle>
     </CardHeader>
   )
