@@ -48,14 +48,19 @@ const Farms: React.FC<FarmsInterface> = ({ title, subTitle, type }) => {
     }
   }, [account, dispatch, fastRefresh])
 
-  const [stakedOnly, setStakedOnly] = useState(false)
+  const [stakedOnly, setStakedOnly] = useState(true)
 
-  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
-
+   const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.ended === false)
+  const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.ended === true)
+  
   const stakedOnlyFarms = activeFarms.filter(
-    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+ (farm) => farm.pid !== 0 && farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
+    const stakedInactiveFarms = inactiveFarms.filter(
+    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+  )
+  
   const getFarms = () => {
     let allFarms = []
     if (stakedOnly) {
