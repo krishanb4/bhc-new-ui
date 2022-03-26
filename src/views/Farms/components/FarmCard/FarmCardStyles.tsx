@@ -12,7 +12,8 @@ export const FCard = muiStyled('div')(({ theme }) => ({
   boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 5px 1px rgba(0, 0, 0, 0.15)',
   marginBottom: 30,
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  border: 'solid 3px #fa8123'
 }))
 
 export const Divider = styled.div`
@@ -46,6 +47,7 @@ export const CardLabelLarge = styled.div`
   color: #f88130;
   margin-top: 20px;
   margin-bottom: 30px;
+  
 `
 
 export const CardTitle = styled.p`
