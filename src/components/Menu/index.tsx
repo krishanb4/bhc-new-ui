@@ -26,7 +26,7 @@ const ChainCard = ({ title, link }) => {
         variant="tertiary"
         style={{
           justifyContent: 'space-between',
-          border: '3px solid #1b78f2',
+          border: '3px solid #fa8123',
           padding: '45px 32px',
           width: '100%',
           marginBottom: 20,
