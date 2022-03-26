@@ -30,7 +30,7 @@ const Avatar = styled.img`
 const MemberName = styled.p`
   font-size: 34px;
   line-height: 1;
-  color: #f88130;
+  color: #1b78f2;
   margin: 0;
   margin-bottom: 5px;
 `

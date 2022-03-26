@@ -178,7 +178,7 @@ const ExchangeCardFooter = styled.div`
   border-top: 3px solid #707070;
   padding-top: 10px;
   font-size: 25px;
-  color: #fa8123;
+  color: #1b78f2;
   font-weight: 600;
   text-align: center;
 `

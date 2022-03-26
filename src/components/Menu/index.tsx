@@ -26,7 +26,7 @@ const ChainCard = ({ title, link }) => {
         variant="tertiary"
         style={{
           justifyContent: 'space-between',
-          border: '3px solid #f88130',
+          border: '3px solid #1b78f2',
           padding: '45px 32px',
           width: '100%',
           marginBottom: 20,
@@ -82,7 +82,7 @@ const Menu = (props) => {
     <>
       <UikitMenu
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        panel={<Drawer afterClickMenu={() => (isMobile ? handleDrawer() : () => {})} open={open} />}
+        panel={<Drawer afterClickMenu={() => (isMobile ? handleDrawer() : () => { })} open={open} />}
         account={account}
         extraButtons={[
           <PButton onClick={() => onPresent()} scale="sm">
