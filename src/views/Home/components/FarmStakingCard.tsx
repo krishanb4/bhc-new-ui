@@ -26,7 +26,7 @@ const CardImage = styled.img`
 
 const Label = styled.div`
   color: ${({ theme }) => theme.colors.textSubtle};
-  color: #f88130;
+  color: #1b78f2;
   font-size: 14px;
 `
 
@@ -57,12 +57,12 @@ const FarmedStakingCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="xl" mb="24px" color="#f88130">
+        <Heading size="xl" mb="24px" color="#1b78f2">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label color="#f88130">{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label color="#1b78f2">{TranslateString(544, 'CAKE to Harvest')}:</Label>
           <CakeHarvestBalance />
         </Block>
         <Block>
@@ -80,8 +80,8 @@ const FarmedStakingCard = () => {
               {pendingTx
                 ? TranslateString(548, 'Collecting CAKE')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`, {
-                    count: balancesWithValue.length,
-                  })}
+                  count: balancesWithValue.length,
+                })}
             </Button>
           ) : (
             <UnlockButton width="100%" />

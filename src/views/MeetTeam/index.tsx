@@ -19,8 +19,8 @@ const MeetTeam = () => {
           )}
         </HeroSubtitle>
       </Hero>
-      
-      <TeamMembers/>
+
+      <TeamMembers />
 
       <Hero>
         <HeroTitle>{TranslateString(576, 'Our Community')}</HeroTitle>
@@ -32,7 +32,7 @@ const MeetTeam = () => {
         </HeroSubtitle>
       </Hero>
 
-      <SocialLinks/>
+      <SocialLinks />
     </Page>
   )
 }
@@ -56,7 +56,7 @@ const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 50px;
   line-height: 1.2;
-  color: #f88130;
+  color: #1b78f2;
   margin-top: 0;
   margin-bottom: 10px;
 

@@ -32,7 +32,7 @@ const CakeWinnings = () => {
 
   return (
     <Block>
-      <CardValue color="#f88130" value={cakeAmount} lineHeight="1.5" />
+      <CardValue color="#1b78f2" value={cakeAmount} lineHeight="1.5" />
       {!cakePriceBusd.eq(0) && <CardBusdValue value={claimAmountBusd} decimals={2} />}
     </Block>
   )
