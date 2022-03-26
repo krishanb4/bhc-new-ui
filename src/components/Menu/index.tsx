@@ -37,9 +37,12 @@ const ChainCard = ({ title, link }) => {
         </Text>
         {title === 'BSC' ? (
           <img src="images/bsc.png" alt="bsc logo" style={priceImagesStyle} />
-        ) : (
-          <img src="images/ftm.png" alt="ftm logo" style={priceImagesStyle} />
-        )}
+        ) : ('')}
+        {title === 'Fantom' ? (
+          <img src="images/ftm.png" alt="bsc logo" style={priceImagesStyle} />
+        ) : ('')}
+        {title === 'Avalanche' ? (
+          <img src="images/avx.png" alt="ftm logo" style={priceImagesStyle} />) : ('')}
       </PButton>
     </a>
   )
@@ -53,6 +56,10 @@ const chains = [
   {
     title: 'Fantom',
     link: 'https://fantom.billionhappiness.finance',
+  },
+  {
+    title: 'Avalanche',
+    link: 'https://avalanche.billionhappiness.finance',
   },
 ]
 
