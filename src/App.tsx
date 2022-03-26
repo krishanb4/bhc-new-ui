@@ -1,24 +1,33 @@
-import React, { lazy } from 'react'
+import React, { useEffect, lazy } from 'react'
 import { Router, Redirect, Route, Switch } from 'react-router-dom'
 import { ResetCSS } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js'
 import useEagerConnect from 'hooks/useEagerConnect'
 import { useFetchPriceList, useFetchProfile, useFetchPublicData } from 'state/hooks'
-import { FarmType } from 'views/Farms/Farms'
-import Audit from 'views/Audit'
-import Learn from 'views/Learn'
+import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import SuspenseWithChunkError from './components/SuspenseWithChunkError'
 import ToastListener from './components/ToastListener'
 import PageLoader from './components/PageLoader'
+import EasterEgg from './components/EasterEgg'
+import Pools from './views/Pools'
 import history from './routerHistory'
-import GlobalStyle from './style/Global'
 
+// Route-based code splitting
+// Only pool is included in the main bundle because of it's the most visited page
+const Home = lazy(() => import('./views/Home'))
 const CustomHomePage = lazy(() => import('./views/CustomHomePage'))
 const Farms = lazy(() => import('./views/Farms'))
 const CustomExchanges = lazy(() => import('./views/CustomExchanges'))
 const PitchDeck = lazy(() => import('./views/PitchDeck'))
+// const Lottery = lazy(() => import('./views/Lottery'))
+// const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
+// const Collectibles = lazy(() => import('./views/Collectibles'))
+// const Teams = lazy(() => import('./views/Teams'))
+// const Team = lazy(() => import('./views/Teams/Team'))
+// const Profile = lazy(() => import('./views/Profile'))
+// const TradingCompetition = lazy(() => import('./views/TradingCompetition'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -29,29 +38,20 @@ BigNumber.config({
 declare const window: any
 
 window.prices = {
-  '0xcaC3b7DE7D5c44E8E1048241C7dE29a61b5C3E7d': 65,
-  '0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4': 78,
-  '0xeDa21B525Ac789EaB1a08ef2404dd8505FfB973D': 0.84,
-  '0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47': 1,
-  '0x4437743ac02957068995c48E08465E0EE1769fBE': 2,
-  '0x790Be81C3cA0e53974bE2688cDb954732C9862e1': 1.4,
-  '0x715d400f88c167884bbcc41c5fea407ed4d2f8a0': 14.8,
-  '0x08ba0619b1e7A582E0BCe5BBE9843322C954C340': 0.28,
-  '0xfb62ae373aca027177d1c18ee0862817f9080d08': 8.08,
-  '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c': 411,
-  '0x9573c88aE3e37508f87649f87c4dd5373C9F31e0': 3,
-  '0x851db01b337ee3e5ab161ad04356816f09ea01dc': 0,
-  '0xd46E7f33f8788f87D6017074dC4e4d781D3df91E': 0,
-  '0xe9e7cea3dedca5984780bafc599bd69add087d56': 1,
-  '0xE4FAE3Faa8300810C835970b9187c268f55D998F': 0,
-  '0xbA2aE424d960c26247Dd6c32edC70B295c744C43': 0,
-  '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe': 0,
-  '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c': 0,
+  // Fantom Opera
+  '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83': 3, // WFTM
+  '0x7BEB05cf5681f402E762F8569c2Fc138a2172978': 140, // BHC
+  '0xAC1F25AEE575D35C668B0a4D336f20E3e92adCd2': 1.4, // HPS
+  '0x20951B5cEC16815FE160e7a1453a94912AfD31B2': 0, // BHC-FTM JetSwap LP
+  '0xa42DE2C3847b96894D44E8A8258A838FAaD9dD5f': 0, // HPS-FTM SpiritSwap LP
 }
 
 const App: React.FC = () => {
   // Monkey patch warn() because of web3 flood
   // To be removed when web3 1.3.5 is released
+  useEffect(() => {
+    // console.warn = () => null
+  }, [])
 
   useEagerConnect()
   useFetchPublicData()
@@ -68,31 +68,41 @@ const App: React.FC = () => {
             <Route path="/" exact>
               <CustomHomePage />
             </Route>
+            {/* <Route path="/farms">
+              <Farms />
+            </Route> */}
             <Route path="/exchanges">
               <CustomExchanges />
             </Route>
-            <Route path="/audit">
-              <Audit />
+            <Route path="/pools">
+              <Farms />
             </Route>
-            <Route path="/learn/:id">
-              <Learn />
-            </Route>
-            <Route path="/emotion-pools">
-              <Farms type={FarmType.EmotionPools} title="Emotion Pools" subTitle="Stake single tokens to earn" />
-            </Route>
-            <Route path="/milestone-pools">
-              <Farms type={FarmType.MilestonePools} title="Milestone Pools" subTitle="Stake single tokens to earn" />
-            </Route>
-            <Route path="/yield-farming">
-              <Farms
-                type={FarmType.Farming}
-                title="Yield Farming"
-                subTitle="Stake Liquidity Pool (LP) tokens to earn"
-              />
-            </Route>
+
             <Route path="/pitch-deck">
               <PitchDeck />
             </Route>
+            {/* <Route path="/lottery">
+              <Lottery />
+            </Route>
+            <Route path="/ifo">
+              <Ifos />
+            </Route>
+            <Route path="/collectibles">
+              <Collectibles />
+            </Route>
+            <Route exact path="/teams">
+              <Teams />
+            </Route>
+            <Route path="/teams/:id">
+              <Team />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/competition">
+              <TradingCompetition />
+            </Route> */}
+            {/* Redirect */}
             <Route path="/staking">
               <Redirect to="/pools" />
             </Route>
@@ -102,12 +112,12 @@ const App: React.FC = () => {
             <Route path="/nft">
               <Redirect to="/collectibles" />
             </Route>
-
+            {/* 404 */}
             <Route component={NotFound} />
           </Switch>
         </SuspenseWithChunkError>
       </Menu>
-
+      {/*  <EasterEgg iterations={2} /> */}
       <ToastListener />
     </Router>
   )
