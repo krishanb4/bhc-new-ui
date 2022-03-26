@@ -85,7 +85,7 @@ const style = {
   height: isMobile ? '100%' : 'auto',
   boxShadow: 24,
   border: '2px solid #fa8123',
-  backgroundColor: '#fa8123',
+  backgroundColor: '#1b78f2',
   borderRadius: isMobile ? 0 : 10,
   p: 4,
 }
@@ -435,7 +435,7 @@ const DrawerComponent = styled(Drawer)`
     top: 64px;
     bottom: 0;
     border-radius: 0 20px 20px 0;
-    background-color: #fa8123;
+    background-color: #1b78f2;
     height: auto;
 
     .MuiBox-root {
@@ -486,7 +486,7 @@ const CustomListItemIcon = styled('div')`
   }
 `
 
-const CustomListItemText = styled(ListItemText)<any>`
+const CustomListItemText = styled(ListItemText) <any>`
   background: #fff;
   padding: 4px 0 4px 16px;
   margin-left: -8px;
@@ -518,7 +518,7 @@ const CustomListSubItemIcon = styled('div')`
   }
 `
 
-const CustomListSubItemText = styled(ListItemText)<any>`
+const CustomListSubItemText = styled(ListItemText) <any>`
   padding: 4px 0 4px 16px;
   margin-left: -8px;
   border-radius: 0 25px 25px 0;
@@ -571,7 +571,7 @@ const MoreListItemIcon = styled('div')`
   }
 `
 
-const MoreListItemText = styled(ListItemText)<any>`
+const MoreListItemText = styled(ListItemText) <any>`
   padding: 4px 0 4px 12px;
   margin-left: -8px;
   border-radius: 0 25px 25px 0;

@@ -1,24 +1,196 @@
-#root div>nav>div>div>button {
-  background-color: #fa8123;
-  border-radius: 30px;
-  min-width: 100px;
-  box-shadow: 0px 0px 20px #f88130;
-  padding: 7px 16px;
-  font-weight: 600;
+::-webkit-scrollbar-thumb {
+    background: #1b78f2 !important;
 }
 
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
+
+/* ################### NAVIGATION ################### */
+
+
+/* CONNECT BUTTON NAVBAR */
+
+.dhDVxu {
+    background-color: #1b78f2 !important;
+    color: white !important;
 }
 
-.video-responsive iframe {
-  display: block !important;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+.gsYCjw {
+    background-color: #1b78f2 !important;
+}
+
+
+/* SIGNED IN NAVBAR */
+
+.HCLXF,
+.hAGTjY {
+    color: #1b78f2 !important;
+    border: 1px solid #1b78f2 !important;
+}
+
+
+/* SIDEBAR TEXT COLOR*/
+
+.eggwsi,
+.hjAkKF,
+.LzgUp {
+    color: black !important;
+}
+
+.bezuWY,
+.drVPzO {
+    box-shadow: inset 4px 0px 0px #1b78f2 !important;
+}
+
+
+/* SVG ICONS */
+
+.hZpnTq,
+.fAKPah,
+.fWxabH,
+.iuuYre,
+.hpuBxl {
+    fill: #1b78f2 !important;
+}
+
+.eZBOSY {
+    fill: black !important;
+}
+
+
+/* NAVBAR ICON*/
+
+.desktop-icon {
+    /*display: none !important;*/
+}
+
+
+/* SIDEBAR BACKGROUND */
+
+.jeBXNn,
+.IKLJT {
+    background: #F0F0F0 !important;
+}
+
+
+/* SIDEBAR HOVER ITEMS */
+
+.bezuWY:hover,
+.ctEzcz:hover {
+    background: white !important;
+}
+
+.iOwBrq,
+.cNgHew,
+.beKuKt,
+.fNcMno {
+    color: #1b78f2 !important;
+}
+
+.desktop-icon,
+.mobile-icon {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.custom-nav {
+    position: absolute;
+    z-index: 999;
+    top: 4px;
+    left: 80px;
+    height: 50px;
+}
+
+
+/* ______________________________________________ */
+
+
+/* ################### MODALS ################### */
+
+
+/* MODAL BACKGROUND */
+
+.hrMCMo {
+    background-color: #ffb380 !important;
+}
+
+
+/* ______________________________________________ */
+
+
+/* ################### HOME PAGE ################### */
+
+.kGRawD,
+.w-50 {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .w-50 {
+        width: 70%;
+    }
+}
+
+.walletRightMargin {
+    margin-right: 20px;
+}
+
+.walletRightMarginx2 {
+    margin-right: 50px;
+}
+
+.walletTopMargin {
+    margin-top: 10px;
+}
+
+
+/* ______________________________________________ */
+
+
+/* ################### Emotion Pool ################### */
+
+.hZwSWH {
+    min-height: 100px !important;
+}
+
+.frtRco,
+.iTStsT,
+.bRnxSN,
+.fCgNnY,
+.TVaJS {
+    color: #1b78f2 !important;
+}
+
+.iZWtlA {
+    background: #1b78f2 !important;
+}
+
+.klHDWa {
+    color: #1b78f2 !important;
+}
+
+.eihoAV {
+    fill: #1b78f2 !important;
+}
+
+.custom-height {
+    height: 30px;
+}
+
+
+/* ______________________________________________ */
+
+
+/* ################### Exchanges ################### */
+
+.exchangeImage {
+    min-width: 80%;
+    max-height: 72px;
+}
+
+
+/* ______________________________________________ */
+
+@media only screen and (max-width: 600px) {
+    .gc4 {
+        grid-column: span 8 !important;
+    }
 }
