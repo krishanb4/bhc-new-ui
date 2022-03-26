@@ -84,8 +84,10 @@ export const useFarms = (): Farm[] => {
 
 export const useFarmsTVL = (): number => {
   const farms = useSelector((state: State) => state.farms.data)
+
+  
   let tvl = 0
-  for (let i = 0; i < farms.length; i++) {
+  for (let i = 0; i < farms.length; i++) {    
     tvl += Number(Number(farms[i].tvlInUSD).toFixed(2))
   }
   return tvl
