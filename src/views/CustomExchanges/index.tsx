@@ -7,6 +7,7 @@ import Page from 'components/layout/Page'
 import styled from 'styled-components'
 import inch from './images/inch.png'
 import julswap from './images/apeswap.png'
+import hakuswap from './images/hakulogo.png'
 import bitmart from './images/bitmart.png'
 import hotbit from './images/hotbit.png'
 import mexc from './images/mexc-global.png'
@@ -29,14 +30,14 @@ const CustomExchanges = () => {
             <LogoCardButton
               onClick={() =>
                 window.open(
-                  'https://pancakeswap.finance/swap?outputCurrency=0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4',
+                  'https://exchange.hakuswap.com/#/swap?inputCurrency=0xa8752333f6a6fe47323a4edac3d09bb1048a0e23',
                   '_blank',
                 )
               }
             >
-              <img src={pancakeswap} alt="pancakeswap" />
+              <img src={hakuswap} alt="hakuswap" />
             </LogoCardButton>
-
+            {/* 
             <LogoCardButton
               onClick={() =>
                 window.open(
@@ -59,7 +60,7 @@ const CustomExchanges = () => {
               }
             >
               <img src={jetswap} alt="jetswap" />
-            </LogoCardButton>
+            </LogoCardButton> */}
           </ExchangeCard>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
