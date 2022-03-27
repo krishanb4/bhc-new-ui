@@ -38,25 +38,8 @@ export const useFetchPublicData = () => {
           .then((res1) => res1.text())
           .then((body1) => {
             window.prices = {
-              '0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4': JSON.parse(body1).bhc_pancakeswap,
-              '0xeDa21B525Ac789EaB1a08ef2404dd8505FfB973D': JSON.parse(body1).pcs_hps,
-              '0xcaC3b7DE7D5c44E8E1048241C7dE29a61b5C3E7d': JSON.parse(body).juls_hpsbnb_one_lp_value,
-              '0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47': JSON.parse(body1).ada,
-              '0x4437743ac02957068995c48E08465E0EE1769fBE': JSON.parse(body1).fts,
-              '0x790Be81C3cA0e53974bE2688cDb954732C9862e1': JSON.parse(body1).brew,
-              '0x715d400f88c167884bbcc41c5fea407ed4d2f8a0': JSON.parse(body1).axs,
-              '0x08ba0619b1e7A582E0BCe5BBE9843322C954C340': JSON.parse(body1).bmon,
-              '0xfb62ae373aca027177d1c18ee0862817f9080d08': JSON.parse(body1).dpet,
-              '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c': JSON.parse(body1).bnb,
-              '0x9573c88aE3e37508f87649f87c4dd5373C9F31e0': JSON.parse(body1).moni,
-              '0x851db01b337ee3e5ab161ad04356816f09ea01dc': JSON.parse(body).bhc_pancakeswapbnb_one_lp_value,
-              '0xd46E7f33f8788f87D6017074dC4e4d781D3df91E': JSON.parse(body).bhc_streetswapbnb_one_lp_value,
-              '0xe9e7cea3dedca5984780bafc599bd69add087d56': 1,
-
-              '0xE4FAE3Faa8300810C835970b9187c268f55D998F': JSON.parse(body1).cate,
-              '0xbA2aE424d960c26247Dd6c32edC70B295c744C43': JSON.parse(body1).doge,
-              '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe': JSON.parse(body1).xrp,
-              '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c': JSON.parse(body1).btc,
+              '0xa8752333f6a6fe47323a4eDAC3D09Bb1048A0E23': JSON.parse(body1).bhc_streetswap, // BHC
+              '0x695Fa794d59106cEbd40ab5f5cA19F458c723829': 0, // HAKU
             }
           })
       })
@@ -254,7 +237,7 @@ export const useGetApiPrice = (address: string) => {
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  return new BigNumber(window.prices['0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4'])
+  return new BigNumber(window.prices['0xa8752333f6a6fe47323a4eDAC3D09Bb1048A0E23'])
 }
 
 export const useBlock = () => {

@@ -8,6 +8,7 @@ const tokens = {
     address: {
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
       97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+      43114: '0xa8752333f6a6fe47323a4eDAC3D09Bb1048A0E23',
     },
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
@@ -1115,6 +1116,7 @@ const tokens = {
     address: {
       56: '0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4',
       97: '',
+      43114: '0xa8752333f6a6fe47323a4eDAC3D09Bb1048A0E23',
     },
     decimals: 18,
     projectLink: '',
@@ -1270,6 +1272,24 @@ const tokens = {
       97: '',
     },
     decimals: 9,
+    projectLink: '',
+  },
+  haku: {
+    symbol: 'HAKU',
+    address: {
+      43114: '0x695Fa794d59106cEbd40ab5f5cA19F458c723829',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: '',
+  },
+  wavax: {
+    symbol: 'WAVAX',
+    address: {
+      43114: '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
+      97: '',
+    },
+    decimals: 18,
     projectLink: '',
   },
 }

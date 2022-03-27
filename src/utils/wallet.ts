@@ -16,14 +16,14 @@ export const setupNetwork = async () => {
         params: [
           {
             chainId: `0x${chainId.toString(16)}`,
-            chainName: 'Binance Smart Chain Mainnet',
+            chainName: 'Avalanche MAinnet C-Chain',
             nativeCurrency: {
-              name: 'BNB',
-              symbol: 'bnb',
+              name: 'AVAX',
+              symbol: 'avax',
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://bscscan.com/'],
+            blockExplorerUrls: ['https://snowtrace.io/'],
           },
         ],
       })
