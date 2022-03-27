@@ -32,7 +32,7 @@ export const useFetchPublicData = () => {
   const { slowRefresh } = useRefresh()
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
-    //dispatch(fetchTokenPrices())
+    // dispatch(fetchTokenPrices())
     fetch('https://bsctools.xyz/bhc/api/bhc_lp_calc.php')
       .then((res) => res.text())
       .then((body) => {
@@ -264,6 +264,7 @@ export const useInitialBlock = () => {
 
 export const usePrice = (address) => {
   return useSelector((state: State) => {
-    return state.pricesBHC.data.find((t) => t.address[250] === address).price_in_usd
+    
+  //  return state.pricesBHC.data.find((t) => t.address[250] === address).price_in_usd
   })
 }
