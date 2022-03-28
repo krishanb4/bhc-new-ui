@@ -41,7 +41,6 @@ export const useFetchPublicData = () => {
               '0xa8752333f6a6fe47323a4eDAC3D09Bb1048A0E23': JSON.parse(body1).bhc, // BHC
               '0x695Fa794d59106cEbd40ab5f5cA19F458c723829': JSON.parse(body1).haku, // HAKU
               '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7': JSON.parse(body1).avax, // AVAX
-
               '0x014C13e4e734b90cDe56f96F42E7227Fc2b2e86E': JSON.parse(body).bhcavax_one_lp_value, // haku lp bhc-avax
             }
           })
