@@ -4,7 +4,7 @@ import { FarmConfig } from './types'
 const farms: FarmConfig[] = [
   {
     farmName: 'Feeling Loved',
-    image: 'Heart_Eyes_Emoji_grande',
+    image: 'heart_eyes',
     pid: 0,
     lpSymbol: 'BHC',
     lpAddresses: {
@@ -25,7 +25,7 @@ const farms: FarmConfig[] = [
   },
   {
     farmName: 'Feeling Happy',
-    image: 'Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_grande',
+    image: 'happy_emoji',
     pid: 1,
     lpSymbol: 'BHC',
     lpAddresses: {
@@ -46,7 +46,7 @@ const farms: FarmConfig[] = [
   },
   {
     farmName: 'Feeling Cute',
-    image: 'Wink_Emoji_2_large',
+    image: 'wink_emoji',
     pid: 2,
     lpSymbol: 'HPS',
     lpAddresses: {
@@ -89,7 +89,7 @@ const farms: FarmConfig[] = [
   },
   {
     farmName: 'Feeling Good',
-    image: 'Smiling_Face_with_Halo_large',
+    image: 'smile_holo',
     pid: 4,
     lpSymbol: 'BHC-FTM JetSwap LP',
     lpAddresses: {
@@ -110,7 +110,7 @@ const farms: FarmConfig[] = [
   },
   {
     farmName: 'Feeling Inspirited',
-    image: 'Ghost_Emoji_2_grande',
+    image: 'ghost',
     pid: 5,
     lpSymbol: 'HPS-FTM SpiritSwap LP',
     lpAddresses: {
