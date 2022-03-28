@@ -1,4 +1,13 @@
 const tokens = {
+  wirtual: {
+    symbol: 'WIRTUAL',
+    address: {
+      56: '0xa19d3f4219e2ed6dc1cb595db20f70b8b6866734',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: '',
+  },
   bnb: {
     symbol: 'BNB',
     projectLink: 'https://www.binance.com/',
