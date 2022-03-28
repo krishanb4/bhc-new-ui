@@ -51,12 +51,18 @@ export const useFetchPublicData = () => {
               '0x9573c88aE3e37508f87649f87c4dd5373C9F31e0': JSON.parse(body1).moni,
               '0x851db01b337ee3e5ab161ad04356816f09ea01dc': JSON.parse(body).bhc_pancakeswapbnb_one_lp_value,
               '0xd46E7f33f8788f87D6017074dC4e4d781D3df91E': JSON.parse(body).bhc_streetswapbnb_one_lp_value,
+              '0x219686EA455297aa6A052c0d41CEfa0c4784549E': JSON.parse(body).pcs_hpsbnb_one_lp_value,
               '0xe9e7cea3dedca5984780bafc599bd69add087d56': 1,
 
               '0xE4FAE3Faa8300810C835970b9187c268f55D998F': JSON.parse(body1).cate,
               '0xbA2aE424d960c26247Dd6c32edC70B295c744C43': JSON.parse(body1).doge,
               '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe': JSON.parse(body1).xrp,
               '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c': JSON.parse(body1).btc,
+              '0xC3440c10c4F36f354eB591B19FafB4906d449B75': JSON.parse(body1).srkb, // SRKb
+              '0x37Ac4D6140e54304D77437A5c11924f61a2D976f': JSON.parse(body1).sfuel, // SFUEL
+              '0xADCa52302e0a6c2d5D68EDCdB4Ac75DeB5466884': JSON.parse(body1).gmr, // GMR
+              '0x76aECB353AbF596BD61EE6BDb07d70787DeC4FD6': JSON.parse(body1).cure, // CURE
+              '0xa19d3f4219e2ed6dc1cb595db20f70b8b6866734': JSON.parse(body1).wirtual, //  WIRTUAL'
             }
           })
       })
