@@ -29,7 +29,7 @@ const CustomExchanges = () => {
             <LogoCardButton
               onClick={() =>
                 window.open(
-                  'https://pancakeswap.finance/swap?outputCurrency=0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4',
+                  'https://swap.spiritswap.finance/#/swap/0xac1f25aee575d35c668b0a4d336f20e3e92adcd2',
                   '_blank',
                 )
               }
