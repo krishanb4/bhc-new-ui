@@ -21,7 +21,7 @@ const farms: FarmConfig[] = [
     factor: 1,
     ended: false,
     isBNB: false,
-    start: 'Opens in: 8 AM UTC 29/Mar/2022',
+    start: 'Opens in: 8 AM UTC 01/Apr/2022',
     category: 'emotional',
   },
   {
@@ -43,7 +43,7 @@ const farms: FarmConfig[] = [
     factor: 1,
     ended: false,
     isBNB: false,
-    start: 'Opens in: 8 AM UTC 29/Mar/2022',
+    start: 'Opens in: 8 AM UTC 01/Apr/2022',
     category: 'emotional',
   },
   {
@@ -65,7 +65,7 @@ const farms: FarmConfig[] = [
     factor: 1,
     ended: false,
     isBNB: false,
-    start: 'Opens in: 8 AM UTC 29/Mar/2022',
+    start: 'Opens in: 8 AM UTC 01/Apr/2022',
     category: 'farming',
   },
 ]
