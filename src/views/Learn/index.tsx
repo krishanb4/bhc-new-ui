@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Box } from '@mui/system'
 import Page from 'components/layout/Page'
 import { useParams } from 'react-router-dom'
-import ReactPlayer from 'react-player'
+
 
 const videos = [
   { id: '1', title: 'QUICK TOUR', link: 'https://www.youtube.com/embed/83CzJ-VqhCk' },
