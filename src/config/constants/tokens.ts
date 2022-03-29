@@ -1,4 +1,12 @@
 const tokens = {
+  wftm: {
+    symbol: 'wFTM',
+    address: {
+      250: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+    },
+    decimals: 18,
+    projectLink: '#',
+  },
   bnb: {
     symbol: 'BNB',
     projectLink: 'https://www.binance.com/',
